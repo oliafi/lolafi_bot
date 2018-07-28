@@ -4,7 +4,8 @@
   "description": "lala",
   "main": "index.js",
   "scripts": {
-    "test": "testwat"
+    "test": "testwat",
+    "start" : "node index.js"
   },
   "repository": {
     "type": "git",

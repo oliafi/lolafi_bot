@@ -18,7 +18,9 @@ app.post('/new-message', function(req, res) {
 
   if (!message || message.text.toLowerCase().indexOf('300') < 0) {
     // In case a message is not present, or if our message does not have the word marco in it, do nothing and return an empty response
-    return res.end()
+    if (!message || message.text.toLowerCase().indexOf('who is Ivan N?') < 0) {
+    // In case a message is not present, or if our message does not have the word marco in it, do nothing and return an empty response
+      return res.end()
   }
 
   // If we've gotten this far, it means that we have received a message containing the word "marco".
@@ -29,7 +31,7 @@ app.post('/new-message', function(req, res) {
       'https://api.telegram.org/bot646843854:AAE5N-7_QqU3I5a2bkMkH5HiKFwVVH8ftfM/sendMessage',
       {
         chat_id: message.chat.id,
-        text: 'otsosi u tractorista!!'
+        text: 'dolboeb 3000!'
       }
     )
     .then(response => {
@@ -42,9 +44,6 @@ app.post('/new-message', function(req, res) {
       console.log('Error :', err)
       res.end('Error :' + err)
     })
-
-  if (!message || message.text.toLowerCase().indexOf('who is Ivan N?') < 0) {
-    // In case a message is not present, or if our message does not have the word marco in it, do nothing and return an empty response
     return res.end()
   }
 
@@ -56,7 +55,7 @@ app.post('/new-message', function(req, res) {
       'https://api.telegram.org/bot646843854:AAE5N-7_QqU3I5a2bkMkH5HiKFwVVH8ftfM/sendMessage',
       {
         chat_id: message.chat.id,
-        text: 'dolboeb 3000!'
+        text: 'otsosi u tractorista!!'
       }
     )
     .then(response => {
